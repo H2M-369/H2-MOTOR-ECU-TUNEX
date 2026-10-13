@@ -1,0 +1,371 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>Ecu TuneX</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net48</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+    <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Resources.Extensions" Version="8.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\bg_h2m.jpg" LogicalName="EcuTuneX.bg_h2m.jpg" />
+    <EmbeddedResource Include="Assets\logo_h2m.png" LogicalName="EcuTuneX.logo_h2m.png" />
+    <EmbeddedResource Include="Assets\splash_tunex.jpg" LogicalName="EcuTuneX.splash_tunex.jpg" />
+  </ItemGroup>
+  <PropertyGroup>
+    <LangVersion>10.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Pengaman: hanya Form1.cs di folder utama yang ikut dikompilasi. -->
+    <!-- Salinan ganda seperti "Form1 (1).cs", "Form1 - Copy.cs", atau file di subfolder diabaikan. -->
+    <Compile Remove="**\Form1*.cs" />
+    <Compile Include="Form1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="_3D_Chart_Graph.30400-K25G-601.bin" />
+    <None Remove="_3D_Chart_Graph.BEAT-110-30400-K81A-N02.bin" />
+    <None Remove="_3D_Chart_Graph.BEAT-110-30400-K81A-N11.bin" />
+    <None Remove="_3D_Chart_Graph.BEAT-110--30400-K81A-N12.bin" />
+    <None Remove="_3D_Chart_Graph.BEAT----30400-K81H-N52.bin" />
+    <None Remove="_3D_Chart_Graph.BEAT---K81H-N62.bin" />
+    <None Remove="_3D_Chart_Graph.BEAT-KIA-30400-N01.bin" />
+    <None Remove="_3D_Chart_Graph.BEAT---K1AA-N02.bin" />
+    <None Remove="_3D_Chart_Graph.BEAT----2020-K1AA-N03.bin" />
+    <None Remove="_3D_Chart_Graph.BEAT-KIA-30400-N11.bin" />
+    <None Remove="_3D_Chart_Graph.BEAT-KIA-30400-N12.bin" />
+    <None Remove="_3D_Chart_Graph.BEAT---K1AA-N13-FX-007.bin" />
+    <None Remove="_3D_Chart_Graph.601read.bin" />
+    <None Remove="_3D_Chart_Graph.651READ.bin" />
+    <None Remove="_3D_Chart_Graph.kzrb11.bin" />
+    <None Remove="_3D_Chart_Graph.kzrb21.bin" />
+    <None Remove="_3D_Chart_Graph.kzrb31.bin" />
+    <None Remove="_3D_Chart_Graph.adv150_kowa_n01.bin" />
+    <None Remove="_3D_Chart_Graph.30400-K1AL-NB1-KYLES.bin" />
+    <None Remove="_3D_Chart_Graph.BEAT-NEW-30400-K1AL-N91-ISS.bin" />
+    <None Remove="_3D_Chart_Graph.ADV-160-30400-KOWL-NA1.bin" />
+    <None Remove="_3D_Chart_Graph.ADV-160-30400-KOWL-NB1-IN01.bin" />
+    <None Remove="_3D_Chart_Graph.ADV-160-30400-KOWL-NB1-IN11.bin" />
+    <None Remove="_3D_Chart_Graph.ADV-150-KOWA-N11-IMMO-OFF.bin" />
+    <None Remove="_3D_Chart_Graph.1_VERZA-38770-K18-902_BIN.bin" />
+    <None Remove="_3D_Chart_Graph.2_CB150R-38770-k15-903_BIN.bin" />
+    <None Remove="_3D_Chart_Graph.3_CB150R-38770-K15-921-BIN.bin" />
+    <None Remove="_3D_Chart_Graph.4_CB150R-38770-K15M-601_BIN.bin" />
+    <None Remove="_3D_Chart_Graph.cbr150_38770_k45_n01.bin" />
+    <None Remove="_3D_Chart_Graph.cbr150_38770_k45_n11.bin" />
+    <None Remove="_3D_Chart_Graph.6_CBR150R-38770-K45G-N42-BIN.bin" />
+    <None Remove="_3D_Chart_Graph.7_CBR150R-38770-K45G-NA1_BIN.bin" />
+    <None Remove="_3D_Chart_Graph.CBR-150-R-38770-K45-NL1-PP1.bin" />
+    <None Remove="_3D_Chart_Graph.8_SONIC-38770-K56-N01_BIN.bin" />
+    <None Remove="_3D_Chart_Graph.38770-K56-NJ1.bin" />
+    <None Remove="_3D_Chart_Graph.9_SUPRAGTR-38770-K56-N11-BIN.bin" />
+    <None Remove="_3D_Chart_Graph.12_VERZA-38770-K18G-941-BIN.bin" />
+    <None Remove="_3D_Chart_Graph.CB150-K18-941.bin" />
+    <None Remove="_3D_Chart_Graph.13_REVO-38770-K03-N32-BIN.bin" />
+    <None Remove="_3D_Chart_Graph.14_VARIO110_BEAT110-38770-K46-N01.bin" />
+    <None Remove="_3D_Chart_Graph.15_BEAT110-38770-K25-901-BIN.bin" />
+    <None Remove="_3D_Chart_Graph.17_BLADE-38770-K41-N01-BIN.bin" />
+    <None Remove="_3D_Chart_Graph.GENIO-110-30400-KOJ-N01-ORIGINAL.bin" />
+    <None Remove="_3D_Chart_Graph.GENIO-110-30400-KOJ-N11-ORIGINAL.bin" />
+    <None Remove="_3D_Chart_Graph.GENIO-110-30400-KOJ-N61-ORIGINAL.bin" />
+    <None Remove="_3D_Chart_Graph.GENIO-110-30400-KOJ-N71-ORIGINAL.bin" />
+    <None Remove="_3D_Chart_Graph.k46n21.bin" />
+    <None Remove="_3D_Chart_Graph.30400-K25G-611.bin" />
+    <None Remove="_3D_Chart_Graph.cbx150.bin" />
+    <None Remove="_3D_Chart_Graph.38779-K15-711.bin" />
+    <None Remove="_3D_Chart_Graph.30400-K1AL-N81..bin" />
+    <None Remove="_3D_Chart_Graph.38770-KYE-942-ORIGINAL.bin" />
+    <None Remove="_3D_Chart_Graph.k56-sonic.bin" />
+    <None Remove="_3D_Chart_Graph.ADV-160-THAILAN-30400-K0WM-TA1.bin" />
+    <None Remove="_3D_Chart_Graph.ADV-150-30400-K0WF-T01.bin" />
+    <None Remove="_3D_Chart_Graph.30400-K1ZF-T01.bin" />
+    <None Remove="_3D_Chart_Graph.30400-K1ZP-T51.bin" />
+    <None Remove="_3D_Chart_Graph.30400-K1ZP-T71.bin" />
+    <None Remove="_3D_Chart_Graph.30400-K36F-T01.bin" />
+    <None Remove="_3D_Chart_Graph.30400-K36S-T31.bin" />
+    <None Remove="_3D_Chart_Graph.30400-K97F-T01.bin" />
+    <None Remove="_3D_Chart_Graph.30400-K2TA-T02.bin" />
+    <None Remove="_3D_Chart_Graph.30400-K20J-T21.bin" />
+    <None Remove="_3D_Chart_Graph.38770-K20-901-Vendor--Keihin--0101270D01-48.bin" />
+    <None Remove="_3D_Chart_Graph.38770-K20-T01-Vendor--Keihin-0101C60D01-64.bin" />
+    <None Remove="_3D_Chart_Graph.30400-K2F-T21-0104140D01.bin" />
+    <None Remove="_3D_Chart_Graph.30400-K2F-T81.bin" />
+    <None Remove="_3D_Chart_Graph.30400-K2F-T91.bin" />
+    <None Remove="_3D_Chart_Graph.30400-K93-T01.bin" />
+    <None Remove="_3D_Chart_Graph.30400-K93-T21.bin" />
+    <None Remove="_3D_Chart_Graph.30400-K2SF-T01.bin" />
+    <None Remove="_3D_Chart_Graph.30400-K60F-T01.bin" />
+    <None Remove="_3D_Chart_Graph.30400-K2VH-T11.bin" />
+    <None Remove="_3D_Chart_Graph.HONDA-GIORNO-30400-K3MF-T01.bin" />
+    <None Remove="_3D_Chart_Graph.30400-K59K-T11.bin" />
+    <None Remove="_3D_Chart_Graph.30400-K60S-M61.bin" />
+    <None Remove="_3D_Chart_Graph.30400-K60S-T73.bin" />
+    <None Remove="_3D_Chart_Graph.38770-K58-TC1.bin" />
+    <None Remove="_3D_Chart_Graph.38770-K58-TC2.bin" />
+    <None Remove="_3D_Chart_Graph.38770-K58-N41.bin" />
+    <None Remove="_3D_Chart_Graph.38770-K58-T81-0102B90D01.bin" />
+    <None Remove="_3D_Chart_Graph.38770-K2J-TH1.bin" />
+    <None Remove="_3D_Chart_Graph.38770-K2J-T01.bin" />
+    <None Remove="_3D_Chart_Graph.38770-K03-T61.bin" />
+    <None Remove="_3D_Chart_Graph.38770-K03-H01.bin" />
+    <None Remove="_3D_Chart_Graph.38770-KWW-643.bin" />
+    <None Remove="_3D_Chart_Graph.38770-K58-N81.bin" />
+    <None Remove="_3D_Chart_Graph.38770-K58R-N81.bin" />
+    <None Remove="_3D_Chart_Graph.38770-KYZ-712.bin" />
+    <None Remove="_3D_Chart_Graph.38770-K41K-NC1.bin" />
+    <None Remove="_3D_Chart_Graph.38770-K3F-T01.bin" />
+    <None Remove="_3D_Chart_Graph.38770-K73-T32.bin" />
+    <None Remove="_3D_Chart_Graph.38770-K73-TC1.bin" />
+    <None Remove="_3D_Chart_Graph.38770-KYZ-T41.bin" />
+    <None Remove="_3D_Chart_Graph.38770-KYZ-T03.bin" />
+    <None Remove="_3D_Chart_Graph.38770-K76-T62.bin" />
+    <None Remove="_3D_Chart_Graph.38770-KVB-S52.bin" />
+    <None Remove="_3D_Chart_Graph.38770-KZL-C01.bin" />
+    <None Remove="_3D_Chart_Graph.38770-K2E-T11.bin" />
+    <None Remove="_3D_Chart_Graph.38770-K26-B02.bin" />
+    <None Remove="_3D_Chart_Graph.38770-K26-921.bin" />
+    <None Remove="_3D_Chart_Graph.38770-K26-911.bin" />
+    <None Remove="_3D_Chart_Graph.38770-K26-901.bin" />
+    <None Remove="_3D_Chart_Graph.38770-K1M-T01.bin" />
+    <None Remove="_3D_Chart_Graph.38770-K1M-T31.bin" />
+    <None Remove="_3D_Chart_Graph.30400-BEAT-NEW-K1AL-NA1.-.bin" />
+    <None Remove="_3D_Chart_Graph.KIAL-N81-IN01.bin" />
+    <None Remove="_3D_Chart_Graph.30400-K35A-T01.bin" />
+    <None Remove="_3D_Chart_Graph.30400-K35A-V01.bin" />
+    <None Remove="_3D_Chart_Graph.30400-K97A-U01.bin" />
+    <None Remove="_3D_Chart_Graph.38770-CAP-H01.bin" />
+    <None Remove="_3D_Chart_Graph.38770-KPG-H01.bin" />
+    <None Remove="_3D_Chart_Graph.38770-KPG-H21.bin" />
+    <None Remove="_3D_Chart_Graph.38770-KPY-H01.bin" />
+    <None Remove="_3D_Chart_Graph.38770-KPY-H61.bin" />
+    <None Remove="_3D_Chart_Graph.BEAT---2020-K1AA-N13.bin" />
+    <None Remove="_3D_Chart_Graph.30400-K1ZV-NA1.bin" />
+    <None Remove="_3D_Chart_Graph.30400-PCX-160-K1ZV-NF1.bin" />
+    <None Remove="_3D_Chart_Graph.30400-PCX-160-K1ZV-NC1.bin" />
+    <None Remove="_3D_Chart_Graph.HONDA-SCOOPY-K2F-NC1.bin" />
+    <None Remove="_3D_Chart_Graph.PCX-150---K97G-N01.bin" />
+    <None Remove="_3D_Chart_Graph.PCX-150---K97G-N31.bin" />
+    <None Remove="_3D_Chart_Graph.PCX-160-K1ZG-N-21.bin" />
+    <None Remove="_3D_Chart_Graph.pcx_160_k1zg_n31.bin" />
+    <None Remove="_3D_Chart_Graph.PCX-160-30400-K1ZN-N41-ORIGINAL.bin" />
+    <None Remove="_3D_Chart_Graph.PCX-160-30400-K1ZN-N51-ORIGINAL.bin" />
+    <None Remove="_3D_Chart_Graph.PCX-160---30400-K1ZF-T11.bin" />
+    <None Remove="_3D_Chart_Graph.VARIO-125---K60A-B01-ORI.bin" />
+    <None Remove="_3D_Chart_Graph.VARIO-125----30400-K60A-B11.bin" />
+    <None Remove="_3D_Chart_Graph.VARI-125---K60K-B21.bin" />
+    <None Remove="_3D_Chart_Graph.VARIO-125---K60K-B31.bin" />
+    <None Remove="_3D_Chart_Graph.VARIO-125---K60R-B61.bin" />
+    <None Remove="_3D_Chart_Graph.VARIO-125-K60R-B71.bin" />
+    <None Remove="_3D_Chart_Graph.VARIO-150-K59A-A11-RAT.bin" />
+    <None Remove="_3D_Chart_Graph.VARIO-150-K59F-A01-IN-01.bin" />
+    <None Remove="_3D_Chart_Graph.VARIO-150-K59J-A71-IN-01.bin" />
+    <None Remove="_3D_Chart_Graph.VARIO-125-30400-K2VG-N42-ORIGINAL.bin" />
+    <None Remove="_3D_Chart_Graph.VARIO-125-30400-K2VG-N32-ORIGINAL.bin" />
+    <None Remove="_3D_Chart_Graph.VARIO160-30400-K2SA-N02.bin" />
+    <None Remove="_3D_Chart_Graph.STD.bin" />
+    <None Remove="_3D_Chart_Graph.verza_38770_k18_961.bin" />
+    <None Remove="_3D_Chart_Graph.STD32.bin" />
+    <None Remove="_3D_Chart_Graph.SCOOPY-30400-K2F-N01.bin" />
+    <None Remove="_3D_Chart_Graph.SCOOPY-30400-K2F-N11.bin" />
+    <None Remove="_3D_Chart_Graph.SCOOPY-30400-K2F-N81.bin" />
+    <None Remove="_3D_Chart_Graph.SCOOPY-30400-K2F-N91.bin" />
+    <None Remove="_3D_Chart_Graph.vario-110-2018-30400-k46-na1.bin" />
+    <None Remove="_3D_Chart_Graph.VARIO-110-30400-K46KNB1.bin" />
+    <None Remove="_3D_Chart_Graph.SPACY.bin" />
+    <None Remove="_3D_Chart_Graph.STYLO-K3VA-N01-ORIGINAL.bin" />
+    <None Remove="_3D_Chart_Graph.SUPRA-X-125-38770-K41-NC1.bin" />
+    <None Remove="_3D_Chart_Graph.SUPRA-X-125-HELM-IN-38770-KYZ-713.bin" />
+    <None Remove="_3D_Chart_Graph.VARIO-LED110-30400-K46-NB1.bin" />
+    <None Remove="_3D_Chart_Graph.VARIO110-FI-LED-30400-K46-N31_BIN.bin" />
+    <None Remove="_3D_Chart_Graph.SCUPY-NEW-KYLES-30400-K2F-ND1.bin" />
+    <None Remove="_3D_Chart_Graph.Round-Button-PNG-Clipart.png" />
+    <None Remove="_3D_Chart_Graph_30400-K2VM-N81.bin" />
+    <None Remove="_3D_Chart_Graph_30400-K2VM-NA1.bin" />
+    <None Remove="_3D_Chart_Graph_30400-K2VM-V51.bin" />
+    <None Remove="_3D_Chart_Graph_30400-KOJ-NA1.bin" />
+    <None Remove="_3D_Chart_Graph_30400-KOJ-NB1.bin" />
+    <None Remove="_3D_Chart_Graph_30400-KOWW-NC2.bin" />
+    <None Remove="_3D_Chart_Graph_30400-KOWW-ND2.bin" />
+    <None Remove="_3D_Chart_Graph_30400-KOWW-NE2.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.30400-K25G-601.bin" LogicalName="_3D_Chart_Graph.30400-K25G-601.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.BEAT-110-30400-K81A-N02.bin" LogicalName="_3D_Chart_Graph.BEAT 110-30400-K81A-N02.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.BEAT-110-30400-K81A-N11.bin" LogicalName="_3D_Chart_Graph.BEAT 110-30400-K81A-N11.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.BEAT-110--30400-K81A-N12.bin" LogicalName="_3D_Chart_Graph.BEAT 110- 30400-K81A-N12.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.BEAT----30400-K81H-N52.bin" LogicalName="_3D_Chart_Graph.BEAT -- 30400-K81H-N52.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.BEAT---K81H-N62.bin" LogicalName="_3D_Chart_Graph.BEAT - K81H-N62.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.BEAT-KIA-30400-N01.bin" LogicalName="_3D_Chart_Graph.BEAT KIA-30400-N01.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.BEAT---K1AA-N02.bin" LogicalName="_3D_Chart_Graph.BEAT - K1AA-N02.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.BEAT----2020-K1AA-N03.bin" LogicalName="_3D_Chart_Graph.BEAT -  2020-K1AA-N03.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.BEAT-KIA-30400-N11.bin" LogicalName="_3D_Chart_Graph.BEAT KIA-30400-N11.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.BEAT-KIA-30400-N12.bin" LogicalName="_3D_Chart_Graph.BEAT KIA-30400-N12.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.BEAT---K1AA-N13-FX-007.bin" LogicalName="_3D_Chart_Graph.BEAT - K1AA-N13-FX-007.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.601read.bin" LogicalName="_3D_Chart_Graph.601read.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.651READ.bin" LogicalName="_3D_Chart_Graph.651READ.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.kzrb11.bin" LogicalName="_3D_Chart_Graph.kzrb11.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.kzrb21.bin" LogicalName="_3D_Chart_Graph.kzrb21.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.kzrb31.bin" LogicalName="_3D_Chart_Graph.kzrb31.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.adv150_kowa_n01.bin" LogicalName="_3D_Chart_Graph.adv150_kowa_n01.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.30400-K1AL-NB1-KYLES.bin" LogicalName="_3D_Chart_Graph.30400-K1AL-NB1 KYLES.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.BEAT-NEW-30400-K1AL-N91-ISS.bin" LogicalName="_3D_Chart_Graph.BEAT NEW-30400-K1AL-N91 ISS.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.ADV-160-30400-KOWL-NA1.bin" LogicalName="_3D_Chart_Graph.ADV 160-30400-KOWL-NA1.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.ADV-160-30400-KOWL-NB1-IN01.bin" LogicalName="_3D_Chart_Graph.ADV 160-30400-KOWL-NB1-IN01.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.ADV-160-30400-KOWL-NB1-IN11.bin" LogicalName="_3D_Chart_Graph.ADV 160-30400-KOWL-NB1-IN11.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.ADV-150-KOWA-N11-IMMO-OFF.bin" LogicalName="_3D_Chart_Graph.ADV 150-KOWA-N11 IMMO OFF.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.1_VERZA-38770-K18-902_BIN.bin" LogicalName="_3D_Chart_Graph.1_VERZA-38770-K18-902_BIN.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.2_CB150R-38770-k15-903_BIN.bin" LogicalName="_3D_Chart_Graph.2_CB150R-38770-k15-903_BIN.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.3_CB150R-38770-K15-921-BIN.bin" LogicalName="_3D_Chart_Graph.3_CB150R-38770-K15-921-BIN.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.4_CB150R-38770-K15M-601_BIN.bin" LogicalName="_3D_Chart_Graph.4_CB150R-38770-K15M-601_BIN.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.cbr150_38770_k45_n01.bin" LogicalName="_3D_Chart_Graph.cbr150_38770_k45_n01.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.cbr150_38770_k45_n11.bin" LogicalName="_3D_Chart_Graph.cbr150_38770_k45_n11.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.6_CBR150R-38770-K45G-N42-BIN.bin" LogicalName="_3D_Chart_Graph.6_CBR150R-38770-K45G-N42-BIN.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.7_CBR150R-38770-K45G-NA1_BIN.bin" LogicalName="_3D_Chart_Graph.7_CBR150R-38770-K45G-NA1_BIN.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.CBR-150-R-38770-K45-NL1-PP1.bin" LogicalName="_3D_Chart_Graph.CBR 150 R-38770-K45-NL1-PP1.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.8_SONIC-38770-K56-N01_BIN.bin" LogicalName="_3D_Chart_Graph.8_SONIC-38770-K56-N01_BIN.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-K56-NJ1.bin" LogicalName="_3D_Chart_Graph.38770-K56-NJ1.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.9_SUPRAGTR-38770-K56-N11-BIN.bin" LogicalName="_3D_Chart_Graph.9_SUPRAGTR-38770-K56-N11-BIN.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.12_VERZA-38770-K18G-941-BIN.bin" LogicalName="_3D_Chart_Graph.12_VERZA-38770-K18G-941-BIN.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.CB150-K18-941.bin" LogicalName="_3D_Chart_Graph.CB150-K18-941.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.13_REVO-38770-K03-N32-BIN.bin" LogicalName="_3D_Chart_Graph.13_REVO-38770-K03-N32-BIN.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.14_VARIO110_BEAT110-38770-K46-N01.bin" LogicalName="_3D_Chart_Graph.14_VARIO110_BEAT110-38770-K46-N01.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.15_BEAT110-38770-K25-901-BIN.bin" LogicalName="_3D_Chart_Graph.15_BEAT110-38770-K25-901-BIN.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.17_BLADE-38770-K41-N01-BIN.bin" LogicalName="_3D_Chart_Graph.17_BLADE-38770-K41-N01-BIN.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.GENIO-110-30400-KOJ-N01-ORIGINAL.bin" LogicalName="_3D_Chart_Graph.GENIO 110-30400-KOJ-N01 ORIGINAL.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.GENIO-110-30400-KOJ-N11-ORIGINAL.bin" LogicalName="_3D_Chart_Graph.GENIO 110-30400-KOJ-N11 ORIGINAL.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.GENIO-110-30400-KOJ-N61-ORIGINAL.bin" LogicalName="_3D_Chart_Graph.GENIO 110-30400-KOJ-N61 ORIGINAL.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.GENIO-110-30400-KOJ-N71-ORIGINAL.bin" LogicalName="_3D_Chart_Graph.GENIO 110-30400-KOJ-N71 ORIGINAL.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.k46n21.bin" LogicalName="_3D_Chart_Graph.k46n21.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.30400-K25G-611.bin" LogicalName="_3D_Chart_Graph.30400-K25G-611.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.cbx150.bin" LogicalName="_3D_Chart_Graph.cbx150.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38779-K15-711.bin" LogicalName="_3D_Chart_Graph.38779-K15-711.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.30400-K1AL-N81..bin" LogicalName="_3D_Chart_Graph.30400-K1AL-N81..bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-KYE-942-ORIGINAL.bin" LogicalName="_3D_Chart_Graph.38770-KYE-942-ORIGINAL.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.k56-sonic.bin" LogicalName="_3D_Chart_Graph.k56 sonic.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.ADV-160-THAILAN-30400-K0WM-TA1.bin" LogicalName="_3D_Chart_Graph.ADV 160 THAILAN 30400-K0WM-TA1.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.ADV-150-30400-K0WF-T01.bin" LogicalName="_3D_Chart_Graph.ADV 150-30400-K0WF-T01.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.30400-K1ZF-T01.bin" LogicalName="_3D_Chart_Graph.30400-K1ZF-T01.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.30400-K1ZP-T51.bin" LogicalName="_3D_Chart_Graph.30400-K1ZP-T51.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.30400-K1ZP-T71.bin" LogicalName="_3D_Chart_Graph.30400-K1ZP-T71.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.30400-K36F-T01.bin" LogicalName="_3D_Chart_Graph.30400-K36F-T01.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.30400-K36S-T31.bin" LogicalName="_3D_Chart_Graph.30400-K36S-T31.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.30400-K97F-T01.bin" LogicalName="_3D_Chart_Graph.30400-K97F-T01.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.30400-K2TA-T02.bin" LogicalName="_3D_Chart_Graph.30400-K2TA-T02.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.30400-K20J-T21.bin" LogicalName="_3D_Chart_Graph.30400-K20J-T21.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-K20-901-Vendor--Keihin--0101270D01-48.bin" LogicalName="_3D_Chart_Graph.38770-K20-901 Vendor- Keihin -0101270D01-48.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-K20-T01-Vendor--Keihin-0101C60D01-64.bin" LogicalName="_3D_Chart_Graph.38770-K20-T01 Vendor- Keihin-0101C60D01-64.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.30400-K2F-T21-0104140D01.bin" LogicalName="_3D_Chart_Graph.30400-K2F-T21-0104140D01.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.30400-K2F-T81.bin" LogicalName="_3D_Chart_Graph.30400-K2F-T81.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.30400-K2F-T91.bin" LogicalName="_3D_Chart_Graph.30400-K2F-T91.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.30400-K93-T01.bin" LogicalName="_3D_Chart_Graph.30400-K93-T01.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.30400-K93-T21.bin" LogicalName="_3D_Chart_Graph.30400-K93-T21.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.30400-K2SF-T01.bin" LogicalName="_3D_Chart_Graph.30400-K2SF-T01.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.30400-K60F-T01.bin" LogicalName="_3D_Chart_Graph.30400-K60F-T01.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.30400-K2VH-T11.bin" LogicalName="_3D_Chart_Graph.30400-K2VH-T11.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.HONDA-GIORNO-30400-K3MF-T01.bin" LogicalName="_3D_Chart_Graph.HONDA GIORNO 30400-K3MF-T01.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.30400-K59K-T11.bin" LogicalName="_3D_Chart_Graph.30400-K59K-T11.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.30400-K60S-M61.bin" LogicalName="_3D_Chart_Graph.30400-K60S-M61.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.30400-K60S-T73.bin" LogicalName="_3D_Chart_Graph.30400-K60S-T73.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-K58-TC1.bin" LogicalName="_3D_Chart_Graph.38770-K58-TC1.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-K58-TC2.bin" LogicalName="_3D_Chart_Graph.38770-K58-TC2.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-K58-N41.bin" LogicalName="_3D_Chart_Graph.38770-K58-N41.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-K58-T81-0102B90D01.bin" LogicalName="_3D_Chart_Graph.38770-K58-T81-0102B90D01.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-K2J-TH1.bin" LogicalName="_3D_Chart_Graph.38770-K2J-TH1.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-K2J-T01.bin" LogicalName="_3D_Chart_Graph.38770-K2J-T01.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-K03-T61.bin" LogicalName="_3D_Chart_Graph.38770-K03-T61.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-K03-H01.bin" LogicalName="_3D_Chart_Graph.38770-K03-H01.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-KWW-643.bin" LogicalName="_3D_Chart_Graph.38770-KWW-643.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-K58-N81.bin" LogicalName="_3D_Chart_Graph.38770-K58-N81.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-K58R-N81.bin" LogicalName="_3D_Chart_Graph.38770-K58R-N81.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-KYZ-712.bin" LogicalName="_3D_Chart_Graph.38770-KYZ-712.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-K41K-NC1.bin" LogicalName="_3D_Chart_Graph.38770-K41K-NC1.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-K3F-T01.bin" LogicalName="_3D_Chart_Graph.38770-K3F-T01.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-K73-T32.bin" LogicalName="_3D_Chart_Graph.38770-K73-T32.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-K73-TC1.bin" LogicalName="_3D_Chart_Graph.38770-K73-TC1.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-KYZ-T41.bin" LogicalName="_3D_Chart_Graph.38770-KYZ-T41.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-KYZ-T03.bin" LogicalName="_3D_Chart_Graph.38770-KYZ-T03.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-K76-T62.bin" LogicalName="_3D_Chart_Graph.38770-K76-T62.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-KVB-S52.bin" LogicalName="_3D_Chart_Graph.38770-KVB-S52.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-KZL-C01.bin" LogicalName="_3D_Chart_Graph.38770-KZL-C01.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-K2E-T11.bin" LogicalName="_3D_Chart_Graph.38770-K2E-T11.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-K26-B02.bin" LogicalName="_3D_Chart_Graph.38770-K26-B02.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-K26-921.bin" LogicalName="_3D_Chart_Graph.38770-K26-921.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-K26-911.bin" LogicalName="_3D_Chart_Graph.38770-K26-911.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-K26-901.bin" LogicalName="_3D_Chart_Graph.38770-K26-901.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-K1M-T01.bin" LogicalName="_3D_Chart_Graph.38770-K1M-T01.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-K1M-T31.bin" LogicalName="_3D_Chart_Graph.38770-K1M-T31.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.30400-BEAT-NEW-K1AL-NA1.-.bin" LogicalName="_3D_Chart_Graph.30400-BEAT NEW-K1AL-NA1...bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.KIAL-N81-IN01.bin" LogicalName="_3D_Chart_Graph.KIAL N81 IN01.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.30400-K35A-T01.bin" LogicalName="_3D_Chart_Graph.30400-K35A-T01.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.30400-K35A-V01.bin" LogicalName="_3D_Chart_Graph.30400-K35A-V01.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.30400-K97A-U01.bin" LogicalName="_3D_Chart_Graph.30400-K97A-U01.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-CAP-H01.bin" LogicalName="_3D_Chart_Graph.38770-CAP-H01.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-KPG-H01.bin" LogicalName="_3D_Chart_Graph.38770-KPG-H01.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-KPG-H21.bin" LogicalName="_3D_Chart_Graph.38770-KPG-H21.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-KPY-H01.bin" LogicalName="_3D_Chart_Graph.38770-KPY-H01.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.38770-KPY-H61.bin" LogicalName="_3D_Chart_Graph.38770-KPY-H61.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.BEAT---2020-K1AA-N13.bin" LogicalName="_3D_Chart_Graph.BEAT - 2020 K1AA-N13.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.30400-K1ZV-NA1.bin" LogicalName="_3D_Chart_Graph.30400-K1ZV-NA1.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.30400-PCX-160-K1ZV-NF1.bin" LogicalName="_3D_Chart_Graph.30400-PCX 160-K1ZV NF1.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.30400-PCX-160-K1ZV-NC1.bin" LogicalName="_3D_Chart_Graph.30400-PCX 160-K1ZV-NC1.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.HONDA-SCOOPY-K2F-NC1.bin" LogicalName="_3D_Chart_Graph.HONDA SCOOPY K2F-NC1.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.PCX-150---K97G-N01.bin" LogicalName="_3D_Chart_Graph.PCX 150 - K97G-N01.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.PCX-150---K97G-N31.bin" LogicalName="_3D_Chart_Graph.PCX 150 - K97G-N31.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.PCX-160-K1ZG-N-21.bin" LogicalName="_3D_Chart_Graph.PCX 160-K1ZG-N 21.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.pcx_160_k1zg_n31.bin" LogicalName="_3D_Chart_Graph.pcx_160_k1zg_n31.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.PCX-160-30400-K1ZN-N41-ORIGINAL.bin" LogicalName="_3D_Chart_Graph.PCX 160-30400-K1ZN-N41 ORIGINAL.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.PCX-160-30400-K1ZN-N51-ORIGINAL.bin" LogicalName="_3D_Chart_Graph.PCX 160-30400-K1ZN-N51 ORIGINAL.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.PCX-160---30400-K1ZF-T11.bin" LogicalName="_3D_Chart_Graph.PCX 160 - 30400-K1ZF-T11.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.VARIO-125---K60A-B01-ORI.bin" LogicalName="_3D_Chart_Graph.VARIO 125 - K60A-B01-ORI.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.VARIO-125----30400-K60A-B11.bin" LogicalName="_3D_Chart_Graph.VARIO 125 -- 30400-K60A-B11.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.VARI-125---K60K-B21.bin" LogicalName="_3D_Chart_Graph.VARI 125 - K60K-B21.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.VARIO-125---K60K-B31.bin" LogicalName="_3D_Chart_Graph.VARIO 125 - K60K-B31.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.VARIO-125---K60R-B61.bin" LogicalName="_3D_Chart_Graph.VARIO 125 - K60R-B61.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.VARIO-125-K60R-B71.bin" LogicalName="_3D_Chart_Graph.VARIO 125 K60R-B71.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.VARIO-150-K59A-A11-RAT.bin" LogicalName="_3D_Chart_Graph.VARIO 150 K59A-A11-RAT.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.VARIO-150-K59F-A01-IN-01.bin" LogicalName="_3D_Chart_Graph.VARIO 150 K59F A01 IN 01.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.VARIO-150-K59J-A71-IN-01.bin" LogicalName="_3D_Chart_Graph.VARIO 150-K59J-A71-IN-01.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.VARIO-125-30400-K2VG-N42-ORIGINAL.bin" LogicalName="_3D_Chart_Graph.VARIO 125-30400-K2VG-N42 ORIGINAL.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.VARIO-125-30400-K2VG-N32-ORIGINAL.bin" LogicalName="_3D_Chart_Graph.VARIO 125-30400-K2VG-N32 ORIGINAL.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.VARIO160-30400-K2SA-N02.bin" LogicalName="_3D_Chart_Graph.VARIO160-30400-K2SA-N02.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.STD.bin" LogicalName="_3D_Chart_Graph.STD.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.verza_38770_k18_961.bin" LogicalName="_3D_Chart_Graph.verza_38770_k18_961.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.STD32.bin" LogicalName="_3D_Chart_Graph.STD32.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.SCOOPY-30400-K2F-N01.bin" LogicalName="_3D_Chart_Graph.SCOOPY-30400-K2F-N01.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.SCOOPY-30400-K2F-N11.bin" LogicalName="_3D_Chart_Graph.SCOOPY-30400-K2F-N11.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.SCOOPY-30400-K2F-N81.bin" LogicalName="_3D_Chart_Graph.SCOOPY-30400-K2F-N81.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.SCOOPY-30400-K2F-N91.bin" LogicalName="_3D_Chart_Graph.SCOOPY-30400-K2F-N91.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.vario-110-2018-30400-k46-na1.bin" LogicalName="_3D_Chart_Graph.vario 110 2018-30400-k46-na1.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.VARIO-110-30400-K46KNB1.bin" LogicalName="_3D_Chart_Graph.VARIO 110-30400-K46KNB1.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.SPACY.bin" LogicalName="_3D_Chart_Graph.SPACY.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.STYLO-K3VA-N01-ORIGINAL.bin" LogicalName="_3D_Chart_Graph.STYLO K3VA-N01 ORIGINAL.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.SUPRA-X-125-38770-K41-NC1.bin" LogicalName="_3D_Chart_Graph.SUPRA X 125 38770-K41-NC1.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.SUPRA-X-125-HELM-IN-38770-KYZ-713.bin" LogicalName="_3D_Chart_Graph.SUPRA X 125 HELM IN 38770-KYZ-713.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.VARIO-LED110-30400-K46-NB1.bin" LogicalName="_3D_Chart_Graph.VARIO LED110 30400 K46-NB1.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.VARIO110-FI-LED-30400-K46-N31_BIN.bin" LogicalName="_3D_Chart_Graph.VARIO110 FI LED 30400 K46-N31_BIN.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.SCUPY-NEW-KYLES-30400-K2F-ND1.bin" LogicalName="_3D_Chart_Graph.SCUPY NEW KYLES 30400-K2F-ND1.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph.Round-Button-PNG-Clipart.png" LogicalName="_3D_Chart_Graph.Round-Button-PNG-Clipart.png" />
+    <EmbeddedResource Include="_3D_Chart_Graph_30400-K2VM-N81.bin" LogicalName="_3D_Chart_Graph.30400-K2VM-N81.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph_30400-K2VM-NA1.bin" LogicalName="_3D_Chart_Graph.30400-K2VM-NA1.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph_30400-K2VM-V51.bin" LogicalName="_3D_Chart_Graph.30400-K2VM-V51.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph_30400-KOJ-NA1.bin" LogicalName="_3D_Chart_Graph.30400-KOJ-NA1.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph_30400-KOJ-NB1.bin" LogicalName="_3D_Chart_Graph.30400-KOJ-NB1.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph_30400-KOWW-NC2.bin" LogicalName="_3D_Chart_Graph.30400-KOWW-NC2.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph_30400-KOWW-ND2.bin" LogicalName="_3D_Chart_Graph.30400-KOWW-ND2.bin" />
+    <EmbeddedResource Include="_3D_Chart_Graph_30400-KOWW-NE2.bin" LogicalName="_3D_Chart_Graph.30400-KOWW-NE2.bin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Management" />
+    <Reference Include="zxing">
+      <HintPath>zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+  </ItemGroup>
+</Project>

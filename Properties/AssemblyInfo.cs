@@ -1,0 +1,19 @@
+using System.Diagnostics;
+using System.Reflection;
+using System.Resources;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Runtime.Versioning;
+
+[assembly: AssemblyTitle("Kline-Remap")]
+[assembly: AssemblyDescription("-")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("-")]
+[assembly: AssemblyProduct("Kline-Remap")]
+[assembly: AssemblyCopyright("Kline-Remap")]
+[assembly: AssemblyTrademark("")]
+[assembly: ComVisible(false)]
+[assembly: Guid("57d5f92a-fd8b-49cf-b8d6-5966005970d1")]
+[assembly: AssemblyFileVersion("1.0.1.0")]
+[assembly: NeutralResourcesLanguage("id-ID")]
+[assembly: AssemblyVersion("1.0.1.0")]
